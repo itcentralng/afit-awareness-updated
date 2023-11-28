@@ -3,7 +3,7 @@ import Home from "./pages/Hero";
 import Header from "./pages/Header";
 import Learn from "./pages/Learn";
 import Game from "./pages/Game";
-import ClimateGame from "./pages/game/climateGame";
+import ClimateGame from "./pages/game/ClimateGame";
 import ClimateLearn from "./pages/ClimateLearn";
 // import CyberGamePlay from "./pages/game/CyberGamePlay";
 
