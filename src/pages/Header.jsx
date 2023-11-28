@@ -1,5 +1,6 @@
 import styles from "./home.module.css";
 import afitLogo from "../assets/AFIT.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -10,16 +11,16 @@ function Header() {
       </div>
       <ul className={styles.navLinks}>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/learn">Learn</a>
+          <Link to="/learn">Learn</Link>
         </li>
         <li>
-          <a href="/game">Gamification</a>
+          <Link to="/game">Gamification</Link>
         </li>
         <li>
-          <a href="/x.html">Footprint Tracker</a>
+          <Link to="/x.html">Footprint Tracker</Link>
         </li>
       </ul>
     </nav>
