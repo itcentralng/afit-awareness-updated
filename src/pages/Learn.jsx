@@ -3,24 +3,29 @@ import "./learn.css";
 function Learn() {
   return (
     <div className="container">
-      <div className="contained">
+      <div className="contained" style={{ width: "90%" }}>
         <div className="learnText">
-          <h3>
+          <h3 style={{ fontSize: "1.5rem" }}>
             <span className="styledText">LEARN</span> NOW
           </h3>
-          <p>
+          <p style={{ fontSize: "1.2rem" }}>
             Welcome to the heart of knowledge exploration! 🚀 Dive into our
             Learn Module and embark on an enriching journey to deepen your
             understanding of climate change and cybersecurity.
           </p>
         </div>
-        <div className="learnContent">
-          <p>What are you interested in learning about?</p>
+        <div
+          className="learnContent"
+          style={{ marginTop: "1em", marginBottom: "1em", padding: "1em" }}
+        >
+          <p style={{ fontSize: "1.2rem", marginBottom: "1em" }}>
+            What are you interested in learning about?
+          </p>
           <div className="learnBoxes">
             <a href="/learn-climate" className="climate">
               <h3>Climate change</h3>
             </a>
-            <a id="generateCyber" className="cyberSecurity">
+            <a href="/learn-cyber" className="cyberSecurity">
               <h3>Cybersecurity</h3>
             </a>
           </div>

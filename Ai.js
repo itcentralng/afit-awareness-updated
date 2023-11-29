@@ -1,8 +1,9 @@
-import { config } from "dotenv";
 import { OpenAI } from "openai";
-config();
 
-const ai = new OpenAI();
+const ai = new OpenAI({
+  apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+  dangerouslyAllowBrowser: true,
+});
 
 async function chatBot(prompt) {
   const res = await ai.chat.completions.create({
@@ -10,7 +11,9 @@ async function chatBot(prompt) {
     messages: [
       {
         role: "system",
-        content: `You MUST generate your replies inside HTML tags.`,
+        content: `You are educated extensively on both Climate Change and Cyber Security awareness. 
+        When prompted on any of these two topics, assume you are in a classroom filled with first year university students
+         and give a captivating and eye catching response for the prompt.`,
       },
       {
         role: "user",

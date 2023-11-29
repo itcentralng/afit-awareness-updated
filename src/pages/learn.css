@@ -102,3 +102,7 @@ video {
   height: 80%;
   width: 25%;
 }
+
+h1 {
+  text-align: left;
+}
