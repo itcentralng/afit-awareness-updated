@@ -208,7 +208,6 @@ function Game() {
                 }}
                 className="game-btn"
                 to="/climate-game"
-                target="_blank"
               >
                 Play
               </Link>
