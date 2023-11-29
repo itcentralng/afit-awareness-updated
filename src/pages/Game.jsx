@@ -208,6 +208,7 @@ function Game() {
                 }}
                 className="game-btn"
                 to="/climate-game"
+                target="_blank"
               >
                 Play
               </Link>
@@ -227,6 +228,7 @@ function Game() {
                 }}
                 className="game-btn"
                 to="https://afit-awareness-app.vercel.app/game/cyberGame.html"
+                target="_blank"
               >
                 Play
               </Link>
