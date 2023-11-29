@@ -7,6 +7,7 @@ function CyberLearn() {
   const [userPrompt, setUserPrompt] = useState("");
   const [generatedResponse, setGeneratedResponse] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleGenerateResponse = async () => {
     if (!userPrompt) {
@@ -17,11 +18,13 @@ function CyberLearn() {
     setError("");
 
     try {
+      setIsLoading(true);
       const response = await chatBot(userPrompt);
       setGeneratedResponse(response);
     } catch (error) {
       setError("Failed to generate a response. Please try again later.");
     }
+    setIsLoading(false);
   };
 
   return (
@@ -62,7 +65,7 @@ function CyberLearn() {
               placeholder="Ask your questions about Cybersecurity here"
               value={userPrompt}
               onChange={(event) => setUserPrompt(event.target.value)}
-              style={{ width: "30em", height: "15em" }}
+              style={{ width: "30em", height: "15em", padding: "1em" }}
             />
             <button
               onClick={handleGenerateResponse}
@@ -75,6 +78,14 @@ function CyberLearn() {
         <div className="chatPrompts">
           <div style={{ display: "block" }}>
             {error && <p style={{ color: "red" }}>{error}</p>}
+            <p
+              style={{
+                color: "#000",
+                display: isLoading === true ? "block" : "none",
+              }}
+            >
+              Generating Response... Please wait.
+            </p>
             {generatedResponse && (
               <div>
                 <h3 style={{ fontSize: "1.5rem" }}>Generated Response:</h3>

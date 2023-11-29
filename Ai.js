@@ -27,7 +27,6 @@ async function chatBot(prompt) {
 
 async function Main(prompt) {
   const response = await chatBot(`${prompt}`);
-  console.log(response);
   return response;
 }
 
