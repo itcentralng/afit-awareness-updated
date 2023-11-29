@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./learn.css";
 
 function Learn() {
@@ -22,12 +23,12 @@ function Learn() {
             What are you interested in learning about?
           </p>
           <div className="learnBoxes">
-            <a href="/learn-climate" className="climate">
+            <Link to="/learn-climate" className="climate">
               <h3>Climate change</h3>
-            </a>
-            <a href="/learn-cyber" className="cyberSecurity">
+            </Link>
+            <Link to="/learn-cyber" className="cyberSecurity">
               <h3>Cybersecurity</h3>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

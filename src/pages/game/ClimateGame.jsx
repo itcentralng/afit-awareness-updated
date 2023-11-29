@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./climateGame.css";
 
 function ClimateGame() {
@@ -8,12 +9,12 @@ function ClimateGame() {
           <span></span>
         </div>
         <div className="gameover" style={{ display: " flex" }}>
-          <a href="/climate-game">Continue keeping the atmosphere clean</a>
+          <Link to="/climate-game">Continue keeping the atmosphere clean</Link>
           <br />
           <p>
             <b>OR</b>
           </p>
-          <a href="/game">Home</a>
+          <Link to="/game">Home</Link>
         </div>
         <h1>
           POLLUTANTS <span>(Kill the Pollutants)</span>

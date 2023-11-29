@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 // import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./game.css";
 
 function Game() {
@@ -197,7 +198,7 @@ function Game() {
                 For the Climate Change Awareness, click the button below to play
                 a fun and interactive game.
               </p>
-              <a
+              <Link
                 style={{
                   backgroundColor: "#0a005b",
                   padding: ".7em 3em",
@@ -206,17 +207,17 @@ function Game() {
                   color: "#fff",
                 }}
                 className="game-btn"
-                href="/climate-game"
+                to="/climate-game"
               >
                 Play
-              </a>
+              </Link>
             </div>
             <div className="cyberSecurity">
               <p>
                 For the Cybersecurity Awareness, click the button below to play
                 a fun and interactive game.
               </p>
-              <a
+              <Link
                 style={{
                   backgroundColor: "#0a005b",
                   padding: ".7em 3em",
@@ -225,10 +226,10 @@ function Game() {
                   color: "#fff",
                 }}
                 className="game-btn"
-                href="https://afit-awareness-app.vercel.app/game/cyberGame.html"
+                to="https://afit-awareness-app.vercel.app/game/cyberGame.html"
               >
                 Play
-              </a>
+              </Link>
             </div>
           </div>
         </div>
