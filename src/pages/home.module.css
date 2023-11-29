@@ -106,10 +106,6 @@ nav {
   transition: color 0.3s ease;
 }
 
-.navLinks li a:hover {
-  color: #0066cc;
-}
-
 .imageSlider {
   width: 50%;
   height: 400px;

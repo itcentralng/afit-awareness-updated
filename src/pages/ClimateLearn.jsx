@@ -59,12 +59,17 @@ function ClimateLearn() {
             }}
           >
             <textarea
-              placeholder="Enter your prompt here"
+              placeholder="Ask your questions about Climate and Climate change here."
               value={userPrompt}
               onChange={(event) => setUserPrompt(event.target.value)}
               style={{ width: "30em", height: "15em" }}
             />
-            <button onClick={handleGenerateResponse}>Generate Response</button>
+            <button
+              onClick={handleGenerateResponse}
+              style={{ backgroundColor: "#0a005b" }}
+            >
+              Generate Response
+            </button>
           </div>
         </div>
         <div className="chatPrompts">

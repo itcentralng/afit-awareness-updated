@@ -1,190 +1,190 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import "./game.css";
 
 function Game() {
-  useEffect(() => {
-    climateFunction();
-    cyberFunction();
-  }, []);
-  function climateFunction() {
-    const questions = document.querySelectorAll(".climateQuestion");
-    let currentQuestion = 0;
-    let correctAnswers = 0;
+  // useEffect(() => {
+  //   climateFunction();
+  //   cyberFunction();
+  // }, []);
+  // function climateFunction() {
+  //   const questions = document.querySelectorAll(".climateQuestion");
+  //   let currentQuestion = 0;
+  //   let correctAnswers = 0;
 
-    function showQuestion(index) {
-      questions.forEach((question) => (question.style.display = "none"));
-      questions[index].style.display = "block";
-    }
+  //   function showQuestion(index) {
+  //     questions.forEach((question) => (question.style.display = "none"));
+  //     questions[index].style.display = "block";
+  //   }
 
-    function validateAnswers() {
-      const userAnswers = [];
+  //   function validateAnswers() {
+  //     const userAnswers = [];
 
-      for (let i = 0; i < questions.length; i++) {
-        const radios = questions[i].querySelectorAll('input[type="radio"]');
-        let answered = false;
+  //     for (let i = 0; i < questions.length; i++) {
+  //       const radios = questions[i].querySelectorAll('input[type="radio"]');
+  //       let answered = false;
 
-        radios.forEach((radio) => {
-          if (radio.checked) {
-            answered = true;
-            userAnswers.push(radio.value);
-            if (radio.value === getCorrectAnswer(i)) {
-              correctAnswers++;
-            }
-          }
-          radio.disabled = true;
-        });
+  //       radios.forEach((radio) => {
+  //         if (radio.checked) {
+  //           answered = true;
+  //           userAnswers.push(radio.value);
+  //           if (radio.value === getCorrectAnswer(i)) {
+  //             correctAnswers++;
+  //           }
+  //         }
+  //         radio.disabled = true;
+  //       });
 
-        if (!answered) {
-          userAnswers.push(null);
-        }
-      }
+  //       if (!answered) {
+  //         userAnswers.push(null);
+  //       }
+  //     }
 
-      return userAnswers;
-    }
+  //     return userAnswers;
+  //   }
 
-    function getCorrectAnswer(questionIndex) {
-      const correctAnswersMap = {
-        0: "b",
-        1: "c",
-        2: "b",
-        3: "c",
-        4: "c",
-      };
-      return correctAnswersMap[questionIndex];
-    }
+  //   function getCorrectAnswer(questionIndex) {
+  //     const correctAnswersMap = {
+  //       0: "b",
+  //       1: "c",
+  //       2: "b",
+  //       3: "c",
+  //       4: "c",
+  //     };
+  //     return correctAnswersMap[questionIndex];
+  //   }
 
-    function showResultPage() {
-      const userAnswers = validateAnswers();
-      if (correctAnswers === questions.length) {
-        alert("Congratulations! You answered all questions correctly!");
-      } else {
-        alert(
-          "Oops! You did not answer all questions correctly. Please retake the quiz."
-        );
-        currentQuestion = 0;
-        correctAnswers = 0;
-        showQuestion(currentQuestion);
-      }
-    }
+  //   function showResultPage() {
+  //     const userAnswers = validateAnswers();
+  //     if (correctAnswers === questions.length) {
+  //       alert("Congratulations! You answered all questions correctly!");
+  //     } else {
+  //       alert(
+  //         "Oops! You did not answer all questions correctly. Please retake the quiz."
+  //       );
+  //       currentQuestion = 0;
+  //       correctAnswers = 0;
+  //       showQuestion(currentQuestion);
+  //     }
+  //   }
 
-    document.querySelectorAll(".climateNext").forEach((button) => {
-      button.addEventListener("click", function () {
-        if (currentQuestion < questions.length - 1) {
-          currentQuestion++;
-          showQuestion(currentQuestion);
-        }
-      });
-    });
+  //   document.querySelectorAll(".climateNext").forEach((button) => {
+  //     button.addEventListener("click", function () {
+  //       if (currentQuestion < questions.length - 1) {
+  //         currentQuestion++;
+  //         showQuestion(currentQuestion);
+  //       }
+  //     });
+  //   });
 
-    document.querySelectorAll(".climatePrev").forEach((button) => {
-      button.addEventListener("click", function () {
-        if (currentQuestion > 0) {
-          currentQuestion--;
-          showQuestion(currentQuestion);
-        }
-      });
-    });
+  //   document.querySelectorAll(".climatePrev").forEach((button) => {
+  //     button.addEventListener("click", function () {
+  //       if (currentQuestion > 0) {
+  //         currentQuestion--;
+  //         showQuestion(currentQuestion);
+  //       }
+  //     });
+  //   });
 
-    document
-      .getElementById("climateForm")
-      .addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission behavior
-        showResultPage();
-      });
+  //   document
+  //     .getElementById("climateForm")
+  //     .addEventListener("submit", function (event) {
+  //       event.preventDefault(); // Prevent default form submission behavior
+  //       showResultPage();
+  //     });
 
-    showQuestion(currentQuestion);
-  }
+  //   showQuestion(currentQuestion);
+  // }
 
-  function cyberFunction() {
-    const questions = document.querySelectorAll(".cyberQuestion");
-    let currentQuestion = 0;
-    let correctAnswers = 0;
+  // function cyberFunction() {
+  //   const questions = document.querySelectorAll(".cyberQuestion");
+  //   let currentQuestion = 0;
+  //   let correctAnswers = 0;
 
-    function showQuestion(index) {
-      questions.forEach((question) => (question.style.display = "none"));
-      questions[index].style.display = "block";
-    }
+  //   function showQuestion(index) {
+  //     questions.forEach((question) => (question.style.display = "none"));
+  //     questions[index].style.display = "block";
+  //   }
 
-    function validateAnswers() {
-      const userAnswers = [];
+  //   function validateAnswers() {
+  //     const userAnswers = [];
 
-      for (let i = 0; i < questions.length; i++) {
-        const radios = questions[i].querySelectorAll('input[type="radio"]');
-        let answered = false;
+  //     for (let i = 0; i < questions.length; i++) {
+  //       const radios = questions[i].querySelectorAll('input[type="radio"]');
+  //       let answered = false;
 
-        radios.forEach((radio) => {
-          if (radio.checked) {
-            answered = true;
-            userAnswers.push(radio.value);
-            if (radio.value === getCorrectAnswer(i)) {
-              correctAnswers++;
-            }
-          }
-          radio.disabled = true;
-        });
+  //       radios.forEach((radio) => {
+  //         if (radio.checked) {
+  //           answered = true;
+  //           userAnswers.push(radio.value);
+  //           if (radio.value === getCorrectAnswer(i)) {
+  //             correctAnswers++;
+  //           }
+  //         }
+  //         radio.disabled = true;
+  //       });
 
-        if (!answered) {
-          userAnswers.push(null);
-        }
-      }
+  //       if (!answered) {
+  //         userAnswers.push(null);
+  //       }
+  //     }
 
-      return userAnswers;
-    }
+  //     return userAnswers;
+  //   }
 
-    function getCorrectAnswer(questionIndex) {
-      const correctAnswersMap = {
-        0: "c",
-        1: "b",
-        2: "c",
-        3: "c",
-        4: "c",
-      };
-      return correctAnswersMap[questionIndex];
-    }
+  //   function getCorrectAnswer(questionIndex) {
+  //     const correctAnswersMap = {
+  //       0: "c",
+  //       1: "b",
+  //       2: "c",
+  //       3: "c",
+  //       4: "c",
+  //     };
+  //     return correctAnswersMap[questionIndex];
+  //   }
 
-    function showResultPage() {
-      const userAnswers = validateAnswers();
-      if (correctAnswers === questions.length) {
-        alert("Congratulations! You answered all questions correctly!");
-      } else {
-        alert(
-          "Oops! You did not answer all questions correctly. Please retake the quiz."
-        );
-        currentQuestion = 0;
-        correctAnswers = 0;
-        showQuestion(currentQuestion);
-      }
-    }
+  //   function showResultPage() {
+  //     const userAnswers = validateAnswers();
+  //     if (correctAnswers === questions.length) {
+  //       alert("Congratulations! You answered all questions correctly!");
+  //     } else {
+  //       alert(
+  //         "Oops! You did not answer all questions correctly. Please retake the quiz."
+  //       );
+  //       currentQuestion = 0;
+  //       correctAnswers = 0;
+  //       showQuestion(currentQuestion);
+  //     }
+  //   }
 
-    document.querySelectorAll(".cyberNext").forEach((button) => {
-      button.addEventListener("click", function () {
-        if (currentQuestion < questions.length - 1) {
-          currentQuestion++;
-          showQuestion(currentQuestion);
-        }
-      });
-    });
+  //   document.querySelectorAll(".cyberNext").forEach((button) => {
+  //     button.addEventListener("click", function () {
+  //       if (currentQuestion < questions.length - 1) {
+  //         currentQuestion++;
+  //         showQuestion(currentQuestion);
+  //       }
+  //     });
+  //   });
 
-    document.querySelectorAll(".cyberPrev").forEach((button) => {
-      button.addEventListener("click", function () {
-        if (currentQuestion > 0) {
-          currentQuestion--;
-          showQuestion(currentQuestion);
-        }
-      });
-    });
+  //   document.querySelectorAll(".cyberPrev").forEach((button) => {
+  //     button.addEventListener("click", function () {
+  //       if (currentQuestion > 0) {
+  //         currentQuestion--;
+  //         showQuestion(currentQuestion);
+  //       }
+  //     });
+  //   });
 
-    document
-      .getElementById("cyberForm")
-      .addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission behavior
-        showResultPage();
-      });
+  //   document
+  //     .getElementById("cyberForm")
+  //     .addEventListener("submit", function (event) {
+  //       event.preventDefault(); // Prevent default form submission behavior
+  //       showResultPage();
+  //     });
 
-    showQuestion(currentQuestion);
-  }
+  //   showQuestion(currentQuestion);
+  // }
 
   return (
     <body>
@@ -197,7 +197,17 @@ function Game() {
                 For the Climate Change Awareness, click the button below to play
                 a fun and interactive game.
               </p>
-              <a className="game-btn" href="/climate-game">
+              <a
+                style={{
+                  backgroundColor: "#0a005b",
+                  padding: ".7em 3em",
+                  borderRadius: "10px",
+                  textDecoration: "none",
+                  color: "#fff",
+                }}
+                className="game-btn"
+                href="/climate-game"
+              >
                 Play
               </a>
             </div>
@@ -207,6 +217,13 @@ function Game() {
                 a fun and interactive game.
               </p>
               <a
+                style={{
+                  backgroundColor: "#0a005b",
+                  padding: ".7em 3em",
+                  borderRadius: "10px",
+                  textDecoration: "none",
+                  color: "#fff",
+                }}
                 className="game-btn"
                 href="https://afit-awareness-app.vercel.app/game/cyberGame.html"
               >
@@ -215,7 +232,7 @@ function Game() {
             </div>
           </div>
         </div>
-        <div className="quiz">
+        {/* <div className="quiz">
           <h1>User Challenge</h1>
           <div className="takeQuiz">
             <div className="climatequiz">
@@ -339,7 +356,6 @@ function Game() {
               </div>
             </div>
 
-            {/* <!-- Cybersecurity quiz below --> */}
 
             <div className="cyberquiz">
               <p>Answer this short quiz related to Cybersecurity awareness</p>
@@ -366,7 +382,6 @@ function Game() {
                       Next
                     </button>
                   </div>
-                  {/* <!-- Repeat for other questions --> */}
                   <div
                     className="cyberQuestion"
                     data-question="2"
@@ -393,7 +408,6 @@ function Game() {
                       Next
                     </button>
                   </div>
-                  {/* <!-- Repeat for other questions --> */}
                   <div
                     className="cyberQuestion"
                     data-question="3"
@@ -422,7 +436,6 @@ function Game() {
                       Next
                     </button>
                   </div>
-                  {/* <!-- Repeat for other questions --> */}
                   <div
                     className="cyberQuestion"
                     data-question="4"
@@ -451,7 +464,6 @@ function Game() {
                       Next
                     </button>
                   </div>
-                  {/* <!-- Repeat for other questions --> */}
                   <div
                     className="cyberQuestion"
                     data-question="5"
@@ -480,7 +492,7 @@ function Game() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </body>
   );
