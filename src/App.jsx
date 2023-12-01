@@ -6,6 +6,7 @@ import Game from "./pages/Game";
 import ClimateGame from "./pages/game/ClimateGame";
 import ClimateLearn from "./pages/ClimateLearn";
 import CyberLearn from "./pages/CyberLearn";
+import FootprintTrackerPage from "./pages/FootprintTrackerPage";
 // import CyberGamePlay from "./pages/game/CyberGamePlay";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/learn" element={<Learn />} />
         <Route path="/game" element={<Game />} />
+        <Route path="/FootprintTrackerPage" element={<FootprintTrackerPage />} />
         <Route path="/climate-game" element={<ClimateGame />} />
         {/* <Route path="/cyber-game" element={<CyberGamePlay />} /> */}
         <Route path="/learn-climate" element={<ClimateLearn />} />
