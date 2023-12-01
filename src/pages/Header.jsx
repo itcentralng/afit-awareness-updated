@@ -20,7 +20,7 @@ function Header() {
           <Link to="/game">Gamification</Link>
         </li>
         <li>
-          <Link to="/x.html">Footprint Tracker</Link>
+          <Link to="/FootprintTrackerPage">Footprint Tracker</Link>
         </li>
       </ul>
     </nav>
